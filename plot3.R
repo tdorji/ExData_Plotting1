@@ -12,7 +12,7 @@ newhh$Datetime <- as.POSIXct(datetime)
 #######   MAKING THE PLOTS ###########
 
 # Plot 2
-png("plot2.png", height = 480, width = 480)
+png("plot3.png", height = 480, width = 480)
 
 with(newhh, plot(Global_active_power~Datetime, type="l", main = "Global Active Power Over Days", ylab="Global Active Power (kilowatts)", xlab=""))
 
