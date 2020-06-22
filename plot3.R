@@ -14,6 +14,11 @@ newhh$Datetime <- as.POSIXct(datetime)
 # Plot 2
 png("plot3.png", height = 480, width = 480)
 
-with(newhh, plot(Global_active_power~Datetime, type="l", main = "Global Active Power Over Days", ylab="Global Active Power (kilowatts)", xlab=""))
+
+plot(newhh$Datetime, newhh$Sub_metering_1, type="l", main = "Sub-metering of Power Over Days", ylab="Energy sub metering")
+lines(newhh$Datetime, newhh$Sub_metering_2, col="red")
+lines(newhh$Datetime, newhh$Sub_metering_3, col="blue")
+legend("topright", col=c("black", "red", "blue"), lty=1, lwd=2, 
+       legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 
 dev.off()
